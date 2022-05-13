@@ -32,7 +32,7 @@ class SistemaChatBot:
         if comando == "-1":
             return True
         else:
-            self.__bot.executa_comando(comando)
+            print(self.__bot.executa_comando(comando))
             return False
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
 
