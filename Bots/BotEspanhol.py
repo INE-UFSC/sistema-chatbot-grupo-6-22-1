@@ -4,10 +4,10 @@ class BotEspanhol(Bot):
     def __init__(self, nome):
         super().__init__(nome)
         self.__nome = nome
-        self.comandos['1'] = ("Bom dia!", "--> Juan: iBienvenido! Como puedo ayudarte?")
-        self.comandos['2'] = ("Qual seu taco favorito?", "--> Juan: Me gusta el pollo")
-        self.comandos['3'] = ("Qual a sua cor favorita?", "--> Juan: Me gusta el azul")
-        self.comandos['4'] = ("Adeus", "--> Juan: iHasta luego! Espero que vuelvas pronto")
+        self.comandos['1'] = ("Bom dia!", "iBienvenido! Como puedo ayudarte?")
+        self.comandos['2'] = ("Qual seu taco favorito?", "Me gusta el pollo")
+        self.comandos['3'] = ("Qual a sua cor favorita?", "Me gusta el azul")
+        self.comandos['4'] = ("Adeus", "iHasta luego! Espero que vuelvas pronto")
 
     #nao esquecer o decorator
     @property
@@ -27,7 +27,7 @@ class BotEspanhol(Bot):
     
     def executa_comando(self,cmd):
         if cmd in self.comandos:
-            return self.comandos[cmd][1]
+            return f"\nVocê --> {self.comandos[cmd][0]}\n{self.__nome} --> {self.comandos[cmd][1]}\n"
         else:
             return "No entiendo"
 
