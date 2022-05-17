@@ -1,6 +1,6 @@
 from Bots.Bot import Bot
 
-class BotEspanhol(Bot):
+class BotIngles(Bot):
     def __init__(self, nome):
         super().__init__(nome)
         self.__nome = nome
