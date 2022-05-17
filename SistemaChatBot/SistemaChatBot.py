@@ -4,6 +4,10 @@ class SistemaChatBot:
     def __init__(self,nomeEmpresa,lista_bots):
         self.__empresa=nomeEmpresa
         ##verificar se a lista de bots contém apenas bots
+        for bot in lista_bots:
+            if not isinstance(bot, Bot):
+                raise TypeError("Algum bot na lista não é um objeto Bot")
+
         self.__lista_bots=lista_bots
         self.__bot = None
     
