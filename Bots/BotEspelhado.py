@@ -36,7 +36,7 @@ class BotEspelhado(Bot):
         if cmd in self.comandos:
             return f"\nVocê --> {self.comandos[cmd][0]}\n{self.__nome} --> {self.comandos[cmd][1]}\n"
         else:
-            return "Woof?"
+            return "idnetne oâN"
 
     def boas_vindas(self):
         return "...odnalaf uotse euq o rednetne arap amelborp ahnet oãn euq orepse ,uehlocse em êcov abO"
