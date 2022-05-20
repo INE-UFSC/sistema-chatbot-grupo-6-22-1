@@ -23,7 +23,14 @@ class SistemaChatBot:
     
     def escolhe_bot(self):
         num = input("Digite o número do bot que deseja utilizar: ")
-        self.__bot = self.__lista_bots[int(num)]
+        try: 
+            if int(num) in range(len(self.__lista_bots)):
+                self.__bot = self.__lista_bots[int(num)]
+            else:
+                print("Bot não encontrado")
+
+        except ValueError:
+            print("Número inválido")
         ##faz a entrada de dados do usuário e atribui o objeto ao atributo __bot 
 
     def mostra_comandos_bot(self):
@@ -45,8 +52,11 @@ class SistemaChatBot:
         self.boas_vindas()
         ##mostra o menu ao usuário
         self.mostra_menu()
-        ##escolha do bot  
-        self.escolhe_bot()    
+        ##escolha do bot
+        while True:
+            self.escolhe_bot()
+            if self.__bot is not None:
+                break  
         ##mostra mensagens de boas-vindas do bot escolhido
         print(self.__bot.boas_vindas())
         ##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída

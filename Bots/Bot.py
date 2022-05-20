@@ -21,9 +21,12 @@ class Bot(ABC):
 
     def mostra_comandos(self):
         mensagem = ""
-        for i in range(1, len(self.comandos)+1):
-            mensagem += f"{i} - {self.comandos[str(i)][0]}\n"
-        
+        # usar dict.items()
+        #for i in range(1, len(self.comandos)+1):
+        #    mensagem += f"{i} - {self.comandos[str(i)][0]}\n"
+        for comando in self.comandos.items():
+            mensagem += f"{comando[0]} - {comando[1][0]}\n"
+
         return mensagem
 
     @abstractmethod
