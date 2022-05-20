@@ -6,7 +6,8 @@ class BotBola(Bot):
         self.__nome = nome
         self.comandos['1'] = ("Bom dia!", "FAAALA FIO, TÁ BÃO??")
         self.comandos['2'] = ("[insira um comentário engraçado aqui]", "HAHAHA!!")
-        self.comandos['3'] = ("Adeus", "Boa! Falô fio!!!")
+        self.comandos['3'] = ("Qual é o seu nome mesmo?", "Boa! Tá sabendo legal")
+        self.comandos['4'] = ("Adeus", "Boa! Falô fio!!!")
 
     #nao esquecer o decorator
     @property
@@ -19,7 +20,7 @@ class BotBola(Bot):
         self.__nome = nome
 
     def apresentacao(self):
-        return f"FAALA FIOTE"
+        return f"FAALA FIOTE!"
  
     #def mostra_comandos(self):
     #    return self.comandos['a']
