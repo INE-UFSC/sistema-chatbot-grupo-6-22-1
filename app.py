@@ -6,6 +6,7 @@ from Bots.BotCachorro import BotCachorro
 from Bots.BotBola import BotBola
 from Bots.BotBinario import BotBinario
 from Bots.BotEspelhado import BotEspelhado
+from Bots.BotCansado import BotCansado
 
 
 ###construa a lista de bots disponíveis aqui
@@ -13,6 +14,7 @@ lista_bots = [BotEspanhol("Juan"), BotIngles("John"), BotCachorro("Theo"), BotBo
 
 #Bots integrados
 lista_bots.append(BotEspelhado("Espelhado"))
+lista_bots.append(BotCansado("Cansado"))
 
 sys = scb.SistemaChatBot("CrazyBots",lista_bots)
 sys.inicio()
